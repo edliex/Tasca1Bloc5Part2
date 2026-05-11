@@ -29,4 +29,3 @@ jobs:
           git commit -m "Afegeix dades de temperatures d'avui" || echo "No hi ha canvis"
           git pull
           git push
-          git pull
