@@ -1,4 +1,4 @@
-import random, datetime
+import random, datetime, json
 
 tiempo = []
 for i in range(5):
@@ -17,7 +17,11 @@ media = media/5
 
 data = datetime.date.today()
 print(data)
+temps_json = {"Temperatura maxima": maxima, 
+              "Temperatura minima": minima, 
+              "Temperatura media": media
+              }
     
-with open(f"temp_{data}.txt","w", encoding='utf-8') as fitx:
-    fitx.write(f"Temperatura maxima: {maxima}, Temperatura minima: {minima}, Temperatura media: {media}")
+with open(f"temp_{data}.json","w", encoding='utf-8') as fitx:
+    json.dump(temps_json, fitx, indent=4)
     
