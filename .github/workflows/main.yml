@@ -27,5 +27,4 @@ jobs:
           git config --local user.name "edliex"
           git add .
           git commit -m "Afegeix dades de temperatures d'avui" || echo "No hi ha canvis"
-          git pull
           git push
