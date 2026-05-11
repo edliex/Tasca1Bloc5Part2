@@ -1,0 +1,1 @@
+Temperatura maxima: 19, Temperatura minima: 13, Temperatura media: 15.4
