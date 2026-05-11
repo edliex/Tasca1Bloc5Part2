@@ -1,0 +1,30 @@
+name: Execucio Diaria Temps
+on:
+  schedule:
+    - cron: '59 23 * * *'
+  workflow_dispatch:
+jobs:
+  run-python-script:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write 
+    steps:
+      - name: Clonem el repositori
+        uses: actions/checkout@v3
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Instal·lar dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+      - name: Executar tiempo.py
+        run: python tiempo.py
+      - name: Guardar el fitxer al repositori
+        run: |
+          git config --local user.email "edgar.linares.2034@lacetania.cat"
+          git config --local user.name "edliex"
+          git add temp_*.txt
+          git commit -m "Afegeix dades de temperatures d'avui"
+          git push
