@@ -10,7 +10,7 @@ jobs:
       contents: write 
     steps:
       - name: Clonem el repositori
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
