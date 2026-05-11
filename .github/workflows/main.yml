@@ -27,4 +27,5 @@ jobs:
           git config --local user.name "edliex"
           git add .
           git commit -m "Afegeix dades de temperatures d'avui"
+          git pull --rebase origin main
           git push
