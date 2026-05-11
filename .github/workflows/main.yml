@@ -25,6 +25,6 @@ jobs:
         run: |
           git config --local user.email "edgar.linares.2034@lacetania.cat"
           git config --local user.name "edliex"
-          git add temp_*.txt
+          git add temp_*.json
           git commit -m "Afegeix dades de temperatures d'avui"
           git push
