@@ -10,7 +10,7 @@ jobs:
       contents: write 
     steps:
       - name: Clonem el repositori
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
@@ -27,5 +27,4 @@ jobs:
           git config --local user.name "edliex"
           git add .
           git commit -m "Afegeix dades de temperatures d'avui"
-          git pull --rebase origin main
           git push
