@@ -1,4 +1,4 @@
-name: Execucio Diaria Temps
+name: Execucio Diaria Del Temps
 on:
   schedule:
     - cron: '59 23 * * *'
